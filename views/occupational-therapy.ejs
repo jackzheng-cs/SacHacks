@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/occupational-therapy.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jura:wght@300..700&family=Krona+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Occupational Therapy</title>
+  </head>
+  <body>
+    <%- include('partials/navBar') %>
+    <div class="content">
+      <header>
+        <h1>Occupational Therapy</h1>
+        <p>Practice your comprehension skills by completing stories.</p>
+      </header>
+
+      <main>
+        <section id="gameContainer">
+          <div id="gameDescription">
+            <img src="imgs/bigcat.png" alt="" />
+
+            <p>
+              Let’s practice your <span>comprehension skills</span> with
+              <span>fill in the blank</span> exercises! Consider the context of
+              the sentence to answer each question.
+            </p>
+          </div>
+
+          <div id="game-area" style="display: none">
+            <div class="game-prompt">
+              <img src="imgs/questioncat.png" alt="" />
+              <h2 id="sentence"><%= question.sentence %></h2>
+            </div>
+
+            <div id="word-bank">
+              <% question.words.forEach(word => { %>
+              <div id="answers"><%= word %></div>
+              <% }) %>
+            </div>
+          </div>
+
+          <div class="buttonGroup">
+            <button id="home-btn">Go Back Home</button>
+            <button id="start-btn">Start Activity</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/occupational-therapy.js"></script>
+  </body>
+</html>

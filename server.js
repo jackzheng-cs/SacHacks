@@ -20,15 +20,38 @@ app.use(express.urlencoded({ extended: true })); // To parse form data
 app.use(express.static("public"));
 app.use(cookieParser()); // To access cookies
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // Render the signup page
 app.get("/", (req, res) => {
   res.render("dashBoard");
 });
 
+const questions = [
+  {
+    sentence:
+      "Sally is going to the <span class='blank' data-answer='market'></span> to buy tomatoes, carrots, and cucumbers.",
+    words: ["market", "school", "hospital", "library"],
+  },
+  {
+    sentence:
+      "She <span class='blank' data-answer='loves'></span> to <span class='blank' data-answer='read'></span> books at the <span class='blank' data-answer='library'></span>.",
+    words: ["run", "loves", "read", "library"],
+  },
+];
+
 // Route for Occupational Therapy page
 app.get("/occupational-therapy", (req, res) => {
-  res.render("occupational-therapy"); // Render the occupational therapy page
+  res.render("occupational-therapy", { question: questions[0] }); // Render the occupational therapy page
+});
+
+app.get("/next/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  if (id < questions.length) {
+    res.json(questions[id]); // Send next question as JSON
+  } else {
+    res.json({ message: "Game Over" });
+  }
 });
 
 // Route for Cognitive Therapy page
