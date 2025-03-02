@@ -33,9 +33,8 @@ h4{
 }
 
 #videos{
-  display: flex;
+  display: none;
   gap: 25px;
-  /* width: 1337px; */
 }
 
 #main-video{
@@ -115,4 +114,84 @@ span{
   background-repeat: no-repeat;
   padding: 40px 0px 0px 80px;
   
+}
+
+#physical-types{
+  display: flex;
+  gap: 25px;
+  background-color: #eff3f7;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.type{
+  border-radius: 10px;
+  border: red solid 2px;
+  flex: 1;
+  background-color: white;
+  padding: 25px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.type h2, .type p{
+  margin: 0;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon{
+  width: 60px;
+  height: auto;
+}
+
+button{
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: #414141;
+  width: fit-content;
+  padding: 6px 36px;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+#purple1{
+  border: 3px solid #BA8BDB;
+}
+
+#purple2{
+  border: 3px solid #946FE1;
+}
+
+#purple3{
+  border: 3px solid #505691;
+}
+
+#purple1-button{
+  background-color: #BA8BDB;
+  color: white;
+}
+
+#purple2-button{
+  background-color: #946FE1;
+  color: white;
+}
+
+#purple3-button{
+  background-color: #505691;
+  color: white;
 }

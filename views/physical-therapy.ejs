@@ -11,7 +11,12 @@
     rel="stylesheet"
     />
 
+    <!-- font awesone icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <title>Physical Therapy</title>
+
+    <script src="js/physical-therapy.js" defer></script>
   </head>
   <body>
     <%- include('partials/navBar') %>
@@ -25,6 +30,45 @@
       <main>
       
         <div id="container">
+          <section id="physical-types">
+            <article class="type" id="purple1">
+              <img class="icon" src="imgs/bicep-physical.png" alt="Purple bicep.">
+
+              <div class="text">
+                <h2>Shoulder, Arm, and Hand Exercises</h2>
+                <p>Improve strength, range of motion, and fine motor skills with these targeted exercises.</p>
+              </div>
+
+              <button id="purple1-button"><p>Start</p><i class="fas fa-arrow-right"></i></button>
+             
+            </article>
+
+            <article class="type" id="purple2">
+              <img class="icon" src="imgs/leg-physical.png" alt="Purple leg.">
+
+              <div class="text">
+                <h2>Leg, Ankle, and Foot Exercises</h2>
+                <p>Improve strength, mobility, and control for better walking and movement.</p>
+              </div>
+
+              <button id="purple2-button"><p>Start</p><i class="fas fa-arrow-right"></i></button>
+             
+            </article>
+
+            <article class="type" id="purple3">
+              <img class="icon" src="imgs/balance-physical.png" alt="Purple leg.">
+
+              <div class="text">
+                <h2>Balance and Stability Exercises</h2>
+                <p>Improve weight shifting, stability, and coordination for better balance.</p>
+              </div>
+
+              <button id="purple3-button"><p>Start</p><i class="fas fa-arrow-right"></i></button>
+             
+            </article>
+            
+          </section>
+
           <div id="videos">
             <section id="main-video">
               <iframe
@@ -131,10 +175,12 @@
           </div>
           
 
+          
+
           <section id="cat-tip">
             <img src="imgs/catdefault.png" width="214" height="204" alt="Content calico cat.">
 
-            <p>Strength your <span>shoulder, arm, and hand mobility</span>, by following along with these in-depth <span>physical exercises</span>.</p>
+            <p>Watch these helpful videos by the <span>American Heart Association</span> and follow along with the <span>physical exercises</span>. You can do it!</p>
           </section>
         </div>
       
