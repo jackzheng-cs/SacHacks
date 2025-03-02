@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jura:wght@300..700&family=Krona+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <%- include('partials/navBar') %>
+
+    <main>
+      <header>
+        <h1>Hello and Welcome!</h1>
+        <h4>I'm so happy! Ready to get started?</h4>
+      </header>
+
+      <section class="cards">
+        <article class="card occupational">
+          <div class="cardContent">
+            <img src="imgs/whiteheart.png" alt="" />
+            <div class="cardDescription">
+              <h2>Occupational Therapy</h2>
+              <h3>Practice your comprehension skills by completing stories.</h3>
+            </div>
+            <button>Start</button>
+          </div>
+        </article>
+
+        <article class="card cognitive">
+          <div class="cardContent">
+            <img src="imgs/whitelightbulb.png" alt="" />
+            <div class="cardDescription">
+              <h2>Cognitive Therapy</h2>
+              <h3>
+                Play our matching game to improve your cognitive perception.
+              </h3>
+            </div>
+            <button>Start</button>
+          </div>
+        </article>
+
+        <article class="card physical">
+          <div class="cardContent">
+            <img src="imgs/whitebicep.png" alt="" />
+            <div class="cardDescription">
+              <h2>Occupational Therapy</h2>
+              <h3>
+                Follow along with our exercise videos to strengthen your
+                mobility.
+              </h3>
+            </div>
+            <button>Start</button>
+          </div>
+        </article>
+
+        <article class="daily">
+          <div class="dailyDescription">
+            <h2>Daily Missions</h2>
+            <h3>Let's tackle your daily goals together!</h3>
+          </div>
+
+          <div class="dailyList">
+            <li><span>1</span>Watch one exercise video</li>
+            <li><span>2</span>Watch one exercise video</li>
+            <li><span>3</span>Watch one exercise video</li>
+            <li><span>4</span>Watch one exercise video</li>
+          </div>
+        </article>
+      </section>
+
+      <section class="graph">
+        <div class="graphHeader">
+          <h1>Track Your Progress</h1>
+          <h4>See how much you’ve improved! I’m so proud of you!</h4>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1261"
+          height="251"
+          viewBox="0 0 1261 251"
+          fill="none"
+        >
+          <path
+            d="M234.735 189.784C146.584 157.594 49.046 204.574 1.61419 244.292C-1.17212 246.626 0.542144 251 4.17632 251H1257C1259.21 251 1261 249.209 1261 247V4.38737C1261 0.726042 1256.48 -1.02055 1254 1.67284C1160.82 102.863 1046.99 187.542 870.999 98.4887C717.81 20.9748 566.182 216.923 485.77 235.393C405.357 253.863 366.243 237.807 234.735 189.784Z"
+            fill="url(#paint0_linear_31_2319)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_31_2319"
+              x1="627.074"
+              y1="155.812"
+              x2="626.835"
+              y2="251.003"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FFA470" />
+              <stop offset="1" stop-color="#FCBDB1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </section>
+    </main>
+  </body>
+</html>
