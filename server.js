@@ -1,6 +1,7 @@
 import express from "express";
 import { createClient } from "@supabase/supabase-js";
 import dotenv from "dotenv";
+import path from "path";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
@@ -12,11 +13,14 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 // Middleware
 app.use(express.urlencoded({ extended: true })); // To parse form data
 app.use(express.static("public"));
 app.use(cookieParser()); // To access cookies
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // Render the signup page
 app.get("/", (req, res) => {
