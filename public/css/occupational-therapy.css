@@ -1,0 +1,170 @@
+body {
+  display: flex;
+  /* flex-direction: row;
+	justify-content: center; */
+  padding: 0;
+  margin: 0;
+  background-color: #eff3f7;
+  color: #414141;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid black; */
+}
+
+header {
+  margin-top: 52px;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-family: "DM Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 48px */
+  letter-spacing: -0.704px;
+}
+
+header p {
+  margin: 0;
+  color: var(--Text, #333);
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.352px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 1337px;
+  height: 809px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 542px;
+}
+
+#gameContainer img {
+  width: 214px;
+  height: 204px;
+}
+
+#gameDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameDescription p {
+  margin: 24px 0px 50px 0px;
+  color: #333;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.528px;
+
+  /* border: 1px solid black; */
+}
+
+#gameDescription span {
+  color: #249f7a;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.528px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  display: flex;
+  padding: 6px 36px;
+  align-items: center;
+  gap: 7px;
+  border-radius: 5px;
+  background: #d7d7d7;
+  border: none;
+
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+  letter-spacing: -0.396px;
+}
+
+#start-btn {
+  background: #249f7a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#home-btn {
+  cursor: pointer;
+}
+
+#submit-btn {
+  cursor: pointer;
+}
+
+#game-area {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.game-prompt {
+  display: flex;
+}
+
+.game-prompt img {
+  width: 227px;
+  height: 230px;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 100px;
+  min-height: 30px;
+  border: 2px dashed #000; /* Makes blank area visible */
+  padding: 5px;
+  margin: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#word-bank {
+  display: flex;
+}
+
+#answers {
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+}
