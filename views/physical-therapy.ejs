@@ -16,43 +16,134 @@
   <body>
     <%- include('partials/navBar') %>
 
-    <main>
+    <div id="content">
       <header>
         <h1>Physical Therapy</h1>
-        <h4>Follow on with our exercise videos to strengthen your mobility.</h4>
+        <p>Follow on with our exercise videos to strengthen your mobility.</p>
       </header>
+      
+      <main>
+      
+        <div id="container">
+          <div id="videos">
+            <section id="main-video">
+              <iframe
+              width="600"
+              height="323"
+              src="https://www.youtube.com/embed/gqBHIX-2xHY?list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN"
+              frameborder="0"
+              allowfullscreen
+              ></iframe>
+    
+              <div id="main-video-text">
+                <div id="main-video-title">
+                  <h2>Crumbling a Piece of Paper - Exercise 1</h2>
+                  <p>Created by American Heart Association | 1 minute and 18 seconds</p>
+                </div>
+                
+                <p>Do this exercise to strengthen your shoulder muscles. It also works on the fine motor skills of your hand. Use both hands equally.</p>
+              </div>
+              
+            </section>
+    
+            <section id="playlist">
+                <h2>Shoulder, Arm, Hand Exercises - Part 1</h2>
+                <p>Post-stroke exercises created by the American Heart Association.</p>
 
-      <div id="container">
-        <div id="videos">
-          <section id="main-video">
-            <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/gqBHIX-2xHY?list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN"
-            frameborder="0"
-            allowfullscreen
-            ></iframe>
+                <div id="video-list">
+                  <article class="video-preview">
+                    <iframe
+                    width="184"
+                    height="103"
+                    src="https://www.youtube.com/embed/gqBHIX-2xHY?list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN"
+                    frameborder="0"
+                    allowfullscreen
+                    ></iframe>
   
-            <!-- the progress bar goes here if we do it -->
-            <h2>Crumbling a Piece of Paper - Exercise 1</h2>
-            <p>A post-stroke exercise created by the American Heart Association.</p>
-          </section>
+                    <div class="captions">
+                      <div class="titles">
+                        <h3>Crumbling a Piece of Paper – Exercise 1</h3>
+                        <h4>American Heart Association</h4>
+                      </div>
   
-          <section id="playlist">
-              <h2>Shoulder, Arm, Hand Exercises - Part 1</h2>
-              <p>Post-stroke exercises created by the American Heart Association.</p>
+                      <p>1 Minute and 18 Seconds</p>
+                    </div>
+                  </article>
+
+                  <article class="video-preview">
+                    <iframe
+                    width="184"
+                    height="103"
+                    src="https://www.youtube.com/embed/?v=rcS-_UI8YPo&list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN&index=22"
+                    frameborder="0"
+                    allowfullscreen
+                    ></iframe>
+  
+                    <div class="captions">
+                      <div class="titles">
+                        <h3>Shoulder Range of Motion – Exercise 2</h3>
+                        <h4>American Heart Association</h4>
+                      </div>
+  
+                      <p>2 Minute and 45 Seconds</p>
+                    </div>
+                  </article>
+
+                  <article class="video-preview">
+                    <iframe
+                    width="184"
+                    height="103"
+                    src="https://www.youtube.com/embed/?v=dekQnnbLyus&list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN&index=7"
+                    frameborder="0"
+                    allowfullscreen
+                    ></iframe>
+  
+                    <div class="captions">
+                      <div class="titles">
+                        <h3>Sitting Trunk Rotations – Exercise 3</h3>
+                        <h4>American Heart Association</h4>
+                      </div>
+  
+                      <p>3 Minutes and 10 Seconds</p>
+                    </div>
+                  </article>
+
+                  <article class="video-preview">
+                    <iframe
+                    width="184"
+                    height="103"
+                    src="https://www.youtube.com/embed/?v=BVDOcQJ-1v8&t=1s"
+                    frameborder="0"
+                    allowfullscreen
+                    ></iframe>
+  
+                    <div class="captions">
+                      <div class="titles">
+                        <h3>Horizontal Range of Motion – Exercise 4</h3>
+                        <h4>American Heart Association</h4>
+                      </div>
+  
+                      <p>1 Minute</p>
+                    </div>
+                  </article>
+                </div>  
+            </section>
+          </div>
+          
+
+          <section id="cat-tip">
+            <img src="imgs/catdefault.png" width="214" height="204" alt="Content calico cat.">
+
+            <p>Strength your <span>shoulder, arm, and hand mobility</span>, by following along with these in-depth <span>physical exercises</span>.</p>
           </section>
         </div>
-        
+      
 
-        <section>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima beatae distinctio magnam, numquam sed impedit similique saepe veritatis voluptas vel?</p>
-        </section>
-      </div>
-     
+      </main>
 
-
-    </main>
+    </div>
+    
+    
 
       
   </body>
