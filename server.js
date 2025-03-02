@@ -34,8 +34,8 @@ const questions = [
   },
   {
     sentence:
-      "She <span class='blank' data-answer='loves'></span> to <span class='blank' data-answer='read'></span> books at the <span class='blank' data-answer='library'></span>.",
-    words: ["run", "loves", "read", "library"],
+      "John is going to <span class='blank' data-answer='swim'></span> at the ocean.",
+    words: ["run", "knit", "swim", "drink"],
   },
 ];
 

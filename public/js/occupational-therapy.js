@@ -4,68 +4,91 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameArea = document.getElementById("game-area");
   const gameDescription = document.getElementById("gameDescription");
   const wordBank = document.getElementById("word-bank");
+  const questionLine = document.getElementById("questionLine");
+  const buttonGroup = document.getElementById("buttonGroup");
+  const sentenceContainer = document.getElementById("sentence");
+  const cat = document.getElementById("gamecat");
+  const sadcat = document.getElementById("sadcat");
 
-  let questionIndex = 1; // Start from the second question
+  let questionIndex = 0;
 
+  // Start the game
   startBtn.addEventListener("click", () => {
+    loadNextQuestion();
     startBtn.textContent = "Submit";
     gameArea.style.display = "block"; // Show the game area
-    // Ensure blank spaces have a visible placeholder
-
     if (gameDescription) gameDescription.style.display = "none"; // Hide game description
-
-    // Make skip button load next question
     homeBtn.textContent = "Skip";
     homeBtn.addEventListener("click", loadNextQuestion);
+    questionLine.style.display = "flex";
+    buttonGroup.style.width = "1224px";
   });
 
+  // Word bank click event listener
   wordBank.addEventListener("click", (event) => {
-    if (event.target.classList.contains("draggable")) {
-      const selectedWord = event.target.textContent;
+    // Check if the clicked element has the class 'answer'
+    if (event.target && event.target.classList.contains("answers")) {
+      const selectedWord = event.target.dataset.word; // Get the word from the clicked element
+      const blank = document.querySelector(".blank"); // Find the first blank in the sentence
 
-      // Check if there are any blank spots left
-      for (let blank of blanks) {
-        if (!blank.textContent) {
-          // If the blank is empty, fill it in
-          blank.textContent = selectedWord;
-          break; // Exit loop after filling the first blank
+      if (blank) {
+        const correctAnswer = blank.dataset.answer; // Get the correct answer from the blank
+
+        if (selectedWord === correctAnswer) {
+          blank.textContent = selectedWord; // Correct answer, fill the blank
+          blank.classList.remove("blank"); // Remove the blank class
+          event.target.style.display = "none"; // Hide the used word from the word bank
+          cat.style.display = "none";
+          sadcat.style.display = "none";
+          happycat.style.display = "block";
+          alert("Correct answer!"); // Provide feedback for correct answer
+        } else {
+          event.target.style.display = "none";
+          cat.style.display = "none";
+          happycat.style.display = "none";
+          sadcat.style.display = "block";
+          alert("Try again!"); // Provide feedback for wrong answer
         }
       }
     }
   });
 
+  // Function to load the next question
   function loadNextQuestion() {
     fetch(`/next/${questionIndex}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.message) {
-          alert(data.message);
+          alert(data.message); // Show "Game Over" message
         } else {
-          // Insert sentence into DOM
-          const sentenceContainer = document.getElementById("sentence");
-          sentenceContainer.innerHTML = data.sentence;
-
-          // Insert words into word bank
-          const wordBank = document.getElementById("word-bank");
-          wordBank.innerHTML = "";
-
-          data.words.forEach((word) => {
-            let newWord = document.createElement("div");
-            newWord.classList.add("draggable");
-            newWord.draggable = true;
-            newWord.textContent = word;
-
-            // Add event listeners for drag and drop
-            newWord.addEventListener("dragstart", handleDragStart);
-            newWord.addEventListener("dragend", handleDragEnd);
-
-            wordBank.appendChild(newWord);
-          });
-
-          setupBlankAreas(); // Ensure blank areas are droppable
+          sentenceContainer.innerHTML = data.sentence; // Insert the sentence with blanks
+          loadWordBank(data.words); // Load word bank options
+          applyBlankStyles(); // Apply styling to blanks
 
           questionIndex++;
         }
       });
+  }
+
+  // Load words into the word bank
+  function loadWordBank(words) {
+    const wordBank = document.getElementById("word-bank");
+    wordBank.innerHTML = ""; // Clear existing words
+    words.forEach((word) => {
+      const wordElement = document.createElement("div");
+      wordElement.classList.add("answers");
+      wordElement.dataset.word = word;
+      wordElement.innerHTML = `<h2>${word}</h2>`;
+      wordBank.appendChild(wordElement);
+    });
+  }
+
+  // Apply styles to blank elements
+  function applyBlankStyles() {
+    const blanks = document.querySelectorAll(".blank");
+    blanks.forEach((blank) => {
+      blank.style.border = "2px dashed #ccc"; // Reapply border style
+      blank.style.backgroundColor = "#f0f0f0"; // Reapply background color
+    });
   }
 });

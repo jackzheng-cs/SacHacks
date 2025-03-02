@@ -1,7 +1,7 @@
 body {
   display: flex;
-  /* flex-direction: row;
-	justify-content: center; */
+  flex-direction: row;
+  justify-content: center;
   padding: 0;
   margin: 0;
   background-color: #eff3f7;
@@ -74,7 +74,7 @@ main {
 }
 
 #gameDescription p {
-  margin: 24px 0px 50px 0px;
+  margin: 24px 0px 0px 0px;
   color: #333;
   font-family: "DM Sans";
   font-size: 24px;
@@ -96,10 +96,11 @@ main {
   letter-spacing: -0.528px;
 }
 
-.buttonGroup {
+#buttonGroup {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 50px;
 }
 
 button {
@@ -136,35 +137,142 @@ button {
 #game-area {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
 
 .game-prompt {
   display: flex;
+  gap: 53px;
 }
 
 .game-prompt img {
+  margin-top: 20px;
   width: 227px;
   height: 230px;
 }
 
+#sadcat,
+#happycat {
+  display: none;
+  width: 227px;
+  height: 230px;
+  object-fit: contain;
+}
+
+#prompt-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 943.5px;
+  background-image: url("../imgs/vectorbackground.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#prompt-background h2 {
+  width: 672px;
+
+  color: #333;
+  font-family: "DM Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 39px */
+  letter-spacing: -0.572px;
+}
+
+#word-bank h2 {
+  margin: 0;
+  color: #333;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.44px;
+}
+
+#word-bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 30px 20px;
+  gap: 128px;
+
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+}
+
+.answers {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 5px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
 .blank {
   display: inline-block;
-  min-width: 100px;
-  min-height: 30px;
+  width: 160px;
+  height: 50px;
   border: 2px dashed #000; /* Makes blank area visible */
   padding: 5px;
   margin: 5px;
   vertical-align: middle;
   text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
-#word-bank {
+#questionLine {
   display: flex;
+  margin-top: 58.75px;
+  width: 611px;
+  height: 65px;
+  gap: 70px;
 }
 
-#answers {
-  width: 160px;
-  height: 50px;
-  cursor: pointer;
+#questionLine li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "DM Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 45px */
+  letter-spacing: -0.66px;
+}
+
+#questionLine li span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  color: #333333;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 36px */
+  letter-spacing: -0.528px;
+}
+
+.question-item.highlighted {
+  color: #ffffff;
+  background-color: #249f7a;
 }

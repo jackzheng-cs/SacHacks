@@ -34,20 +34,29 @@
 
           <div id="game-area" style="display: none">
             <div class="game-prompt">
-              <img src="imgs/questioncat.png" alt="" />
-              <h2 id="sentence"><%= question.sentence %></h2>
+              <img id="gamecat" src="imgs/questioncat.png" alt="" />
+              <img id="sadcat" src="imgs/sadcat.png" alt="" />
+              <img id="happycat" src="imgs/happycat.png" alt="" />
+
+              <div id="prompt-background">
+                <h2 id="sentence"><%= question.sentence %></h2>
+              </div>
             </div>
 
-            <div id="word-bank">
-              <% question.words.forEach(word => { %>
-              <div id="answers"><%= word %></div>
-              <% }) %>
-            </div>
+            <div id="word-bank"></div>
           </div>
 
-          <div class="buttonGroup">
+          <div id="buttonGroup">
             <button id="home-btn">Go Back Home</button>
             <button id="start-btn">Start Activity</button>
+          </div>
+
+          <div id="questionLine" style="display: none">
+            <li><span id="num1" class="question-item">1</span></li>
+            <li><span id="num2" class="question-item">2</span></li>
+            <li><span id="num3" class="question-item">3</span></li>
+            <li><span id="num4" class="question-item">4</span></li>
+            <li><span id="num5" class="question-item">5</span></li>
           </div>
         </section>
       </main>

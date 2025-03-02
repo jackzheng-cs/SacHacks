@@ -138,6 +138,12 @@ h4 {
   height: 355px;
 }
 
+.cards a {
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .cardContent img {
   width: 50px;
   height: 50px;
@@ -183,6 +189,7 @@ button {
   font-weight: 500;
   line-height: 150%; /* 27px */
   letter-spacing: -0.396px;
+  cursor: pointer;
 }
 
 button img {
