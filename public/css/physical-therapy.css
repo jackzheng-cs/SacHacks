@@ -5,4 +5,25 @@ body {
   padding: 0;
   margin: 0;
   background-color: #eff3f7;
+  font-family: "DM Sans", sans-serif;
+}
+
+#container{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#videos{
+  display: flex;
+}
+
+#main-video{
+  background-color: #EFF3F7;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+iframe{
+  border-radius: 10px;
 }

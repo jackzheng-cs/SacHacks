@@ -5,9 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/physical-therapy.css" />
     <link rel="stylesheet" href="css/navBar.css" />
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jura:wght@300..700&family=Krona+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+    />
+
     <title>Physical Therapy</title>
   </head>
   <body>
     <%- include('partials/navBar') %>
+
+    <main>
+      <header>
+        <h1>Physical Therapy</h1>
+        <h4>Follow on with our exercise videos to strengthen your mobility.</h4>
+      </header>
+
+      <div id="container">
+        <div id="videos">
+          <section id="main-video">
+            <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/gqBHIX-2xHY?list=PLrDeLRAEJG0ZbA7P-q2h5gQZEFA611PUN"
+            frameborder="0"
+            allowfullscreen
+            ></iframe>
+  
+            <!-- the progress bar goes here if we do it -->
+            <h2>Crumbling a Piece of Paper - Exercise 1</h2>
+            <p>A post-stroke exercise created by the American Heart Association.</p>
+          </section>
+  
+          <section id="playlist">
+              <h2>Shoulder, Arm, Hand Exercises - Part 1</h2>
+              <p>Post-stroke exercises created by the American Heart Association.</p>
+          </section>
+        </div>
+        
+
+        <section>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima beatae distinctio magnam, numquam sed impedit similique saepe veritatis voluptas vel?</p>
+        </section>
+      </div>
+     
+
+
+    </main>
+
+      
   </body>
 </html>
