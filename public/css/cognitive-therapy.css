@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: #eff3f7;
+    font-family: "DM Sans", sans-serif;
+    color: #414141;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 1337px;
+    height: 809px;
+  
+    border-radius: 10px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+  }
+
+  #main-game{
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+  }
+ 
+  #leftGroup, #rightGroup{
+    width: 650px;
+    height: 550px;
+    background-color: #eff3f7;
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+  
+  #game-info {
+    font-weight: 600;
+        
+    
+  }
+
+  #score, #timer{
+    padding: 25px;
+    background-color: #eff3f7;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+
+  }
+  
+  #game-board {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+  
+  .symbol {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  .symbol:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+  span{
+    color: #48B1CB;
+    font-weight: 700;
+  }
+
+  #cat-tip{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    align-items: center;
+  }
+  
+  #cat-tip p{
+    font-size: 28px;
+    width: 760px;
+    height: 130px;
+    background-image: url(../imgs/bluetextbox.png);
+    background-repeat: no-repeat;
+    padding: 40px 0px 0px 60px;
+    
+  }
+
+  #cattip-timer{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+  }
+
+.button, button{
+    font-size: 18px;
+    padding: 6px 36px;
+}

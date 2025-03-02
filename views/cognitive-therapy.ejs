@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cognative Therapy</title>
+    <link rel="stylesheet" href="css/cognitive-therapy.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+  </head>
+  <body>
+    <%- include('partials/navBar') %>
+
+    <div id="container">
+        <header>
+            <h1>Cognitive Therapy</h1>
+            <p>Play our matching game to improve your cognitive perception.</p>
+        </header>
+    
+        <main>
+            <!-- <div id="start">
+                <img src="imgs/catdefault.png" width="214" height="204" alt="Content calico cat.">
+
+                <p>Let’s practice your <span>cognitive perception</span> with a card <span>visual</span> card matching activity! Click on the <span>matching items</span> on both cards!</p>
+
+                <a href="index.ejs" class="button"><p>Go Back Home</p><i class="fas fa-arrow-right"></i></a>
+                <button><p>Start Activity</p><i class="fas fa-arrow-right"></i></button>
+            </div> -->
+
+            <div id="main-game">
+                <section id="leftGroup">
+                    <div id="game-board"></div>
+                </section>
+        
+                <section id="rightGroup">
+        
+                </section>
+            </div>
+            
+            <div id="cattip-timer">
+                <section id="cat-tip">
+                    <img src="imgs/catdefault.png" width="214" height="204" alt="Content calico cat.">
+
+                    <p>Let’s practice your <span>cognitive perception</span> with a <span>visual</span> card matching activity! Click  the <span>matching items</span> on both cards!  </p>
+                </section>
+
+                <div id="game-info">
+                    <p id="score">Score: 0</p>
+                    <p id="timer">Time Left: 60s</p>
+                </div>
+
+            </div>
+            
+        </main>
+    </div>
+   
+
+    
+
+
+    
+    <script src="/js/cognitive-therapy.js"></script>
+  </body>
+</html>

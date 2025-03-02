@@ -20,7 +20,6 @@ app.use(express.urlencoded({ extended: true })); // To parse form data
 app.use(express.static("public"));
 app.use(cookieParser()); // To access cookies
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
 
 // Render the signup page
 app.get("/", (req, res) => {
